@@ -7,6 +7,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./videos/videos.module').then(m => m.VideosModule),
   },
+  { path: 'video', loadChildren: () => import('./video/video.module').then(m => m.VideoModule) },
   {
     path: '**',
     redirectTo: '/',

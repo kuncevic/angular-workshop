@@ -5,3 +5,12 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+a, a:active {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
