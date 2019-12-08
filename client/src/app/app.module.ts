@@ -10,6 +10,10 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoComponent } from './video/video.component';
 import { VideosComponent } from './videos/videos.component';
 
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +24,10 @@ import { VideosComponent } from './videos/videos.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

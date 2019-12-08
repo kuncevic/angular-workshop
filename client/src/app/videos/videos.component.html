@@ -1,16 +1,19 @@
-<li *ngIf="videos">
-  <ul *ngFor="let video of videos">
-    <a [routerLink]="['video', video.id]">
-      <span class="example-card">
-          <span>{{video?.title}}</span>
-        <br>
-        <img [width]="200" [height]="100" src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="Video image">
-        <br>
-          <span>Likes: {{video?.likes}}</span>
-        <br>
-          <span>Dislikes: {{video?.dislikes}}</span>
-      </span>
-    </a>
-  </ul>
-</li>
+<mat-grid-list gutterSize="1rem" cols="3">
 
+  <mat-grid-tile *ngFor="let video of videos">
+
+    <a [routerLink]="['video', video.id]" class="card-wrapper">
+      <mat-card class="card">
+        <img mat-card-image src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="video preview">
+        <mat-card-header>
+          <img mat-card-avatar src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="video preview">
+          <mat-card-title>{{video?.title}}</mat-card-title>
+          <mat-card-subtitle>Likes: {{video?.likes}}</mat-card-subtitle>
+          <mat-card-subtitle>Dislikes: {{video?.dislikes}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+    </a>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
