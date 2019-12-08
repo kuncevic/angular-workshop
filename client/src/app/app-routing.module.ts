@@ -8,7 +8,8 @@ import { VideosComponent } from './videos/videos.component';
 const routes: Routes = [
   { path: '', component: VideosComponent },
   { path: 'video/:videoId', component: VideoComponent },
-  { path: '**', redirectTo: '' }];
+  { path: '**', redirectTo: '', pathMatch: 'full' }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
