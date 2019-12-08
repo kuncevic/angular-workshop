@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+
+import { VideoService } from '../video.service';
+import { VideoModel } from '../video.model';
+
 
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.scss']
+  styleUrls: ['./videos.component.scss'],
 })
 export class VideosComponent implements OnInit {
 
-  videos: any[] = [];
+  videos: VideoModel[] = [];
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: VideoService) {
+  }
 
   ngOnInit() {
     this.appService.getVideos().subscribe(videos => {

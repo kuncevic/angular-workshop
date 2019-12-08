@@ -5,8 +5,9 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { MatButtonModule } from '@angular/material';
+import { MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,10 +29,13 @@ import { EditComponent } from './edit/edit.component';
     HttpClientModule,
     AppRoutingModule,
     YouTubePlayerModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatCardModule,
     MatGridListModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
