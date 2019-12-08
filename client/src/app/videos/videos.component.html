@@ -1,1 +1,16 @@
-<p>videos works!</p>
+<li *ngIf="videos">
+  <ul *ngFor="let video of videos">
+    <a [routerLink]="['video', video.id]">
+      <span class="example-card">
+        <span>
+          <img [width]="60" [height]="60" src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg">
+          <span>{{video?.title}}</span>
+          <span>Likes: {{video?.likes}}</span>
+          <span>Dislikes: {{video?.dislikes}}</span>
+        </span>
+        <img  [width]="200" [height]="100" src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="Video image">
+      </span>
+    </a>
+  </ul>
+</li>
+
