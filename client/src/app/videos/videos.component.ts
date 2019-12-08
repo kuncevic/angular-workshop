@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-videos',
@@ -6,26 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./videos.component.scss']
 })
 export class VideosComponent implements OnInit {
-  videos = [
-      {
-        "id": "NeQM1c-XCDc",
-        "title": "Rammstein - Deutschland (Official Video)",
-        "views": "88123123",
-        "likes": "22543345",
-        "dislikes": "75123"
-      },
-      {
-        "id": "pat2c33sbog",
-        "title": "Rammstein - Ausländer (Official Video)",
-        "views": "30123443",
-        "likes": "7094532",
-        "dislikes": "19542"
-      }
-  ];
 
-  constructor() { }
+  videos: any[];
+  
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    this.videos = this.appService.getVideos();
   }
 
 }
