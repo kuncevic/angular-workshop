@@ -8,12 +8,14 @@ import { AppService } from '../app.service';
 })
 export class VideosComponent implements OnInit {
 
-  videos: any[];
-  
+  videos: any[] = [];
+
   constructor(private appService: AppService) { }
 
   ngOnInit() {
-    this.videos = this.appService.getVideos();
+    this.appService.getVideos().subscribe(videos => {
+      this.videos = videos;
+    });
   }
 
 }
