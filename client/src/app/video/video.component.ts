@@ -14,20 +14,10 @@ export class VideoComponent implements OnInit {
 
   ngOnInit() {
     this.videoId = this.getVideoId();
-    console.log(this.videoId);
-    const tag = this.createIframe();
-    document.body.appendChild(tag);
   }
-  
+
   public getVideoId() {
     return this.route.snapshot.params.videoId;
-  }
-  
-  public createIframe() {
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    
-    return tag;
   }
 
 }
