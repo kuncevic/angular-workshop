@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { VideoModel } from '../video.model';
 
 @Component({
   selector: 'app-video',
@@ -7,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
-  videoId;
+  videoId: VideoModel;
 
   constructor(private route: ActivatedRoute) {
   }
