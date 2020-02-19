@@ -17,7 +17,7 @@ export class EditComponent implements OnInit {
     dislikes: ""
   });
 
-  private videoId = this.route.snapshot.params.videoId;
+  private videoId: string;
   private video: VideoModel;
 
   constructor(
@@ -27,6 +27,7 @@ export class EditComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.videoId = this.getVideoId();
     this.videoService.getVideo(this.videoId).subscribe(video => {
       this.video = video;
       this.form.patchValue(video);
@@ -39,5 +40,9 @@ export class EditComponent implements OnInit {
       const video: VideoModel = { ...this.video, ...update };
       this.videoService.updateVideo(video).subscribe();
     }
+  }
+
+  public getVideoId() {
+    return this.route.snapshot.params.videoId;
   }
 }
