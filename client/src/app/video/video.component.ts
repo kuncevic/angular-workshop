@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./video.component.scss']
 })
 export class VideoComponent implements OnInit {
-  videoId = this.route.snapshot.params.videoId;
+  videoId;
 
   constructor(private route: ActivatedRoute) {
   }
