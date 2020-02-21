@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { VideoComponent } from './video/video.component';
-import { VideosComponent } from './videos/videos.component';
-import { EditComponent } from './edit/edit.component';
+import { VideoComponent } from './you-tube/video/video.component';
+import { VideosComponent } from './you-tube/videos/videos.component';
+import { EditComponent } from './you-tube/edit/edit.component';
 
 
 const routes: Routes = [
