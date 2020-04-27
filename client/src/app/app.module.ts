@@ -10,9 +10,10 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { VideoComponent } from './video/video.component';
 import { VideosComponent } from './videos/videos.component';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     YouTubePlayerModule,
     MatToolbarModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
