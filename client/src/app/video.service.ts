@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
 import { environment } from '../environments/environment';
-import { VideoModel } from './video.model';
+import { Video } from './video';
+
 
 
 @Injectable({ providedIn: 'root' })
@@ -13,15 +13,15 @@ export class VideoService {
     private httpClient: HttpClient) {
   }
 
-  getVideos(): Observable<VideoModel[]> {
-    return this.httpClient.get<VideoModel[]>(`${environment.apiUrl}/video`);
+  getVideos(): Observable<Video[]> {
+    return this.httpClient.get<Video[]>(`${environment.apiUrl}/video`);
   }
 
-  getVideo(id: string): Observable<VideoModel> {
-    return this.httpClient.get<VideoModel>(`${environment.apiUrl}/video/${id}`);
+  getVideo(id: string): Observable<Video> {
+    return this.httpClient.get<Video>(`${environment.apiUrl}/video/${id}`);
   }
 
-  updateVideo(video: Partial<VideoModel>): Observable<VideoModel> {
-    return this.httpClient.put<VideoModel>(`${environment.apiUrl}/video/${video.id}`, video);
+  updateVideo(video: Partial<Video>): Observable<Video> {
+    return this.httpClient.put<Video>(`${environment.apiUrl}/video/${video.id}`, video);
   }
 }
