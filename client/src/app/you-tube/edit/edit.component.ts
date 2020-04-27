@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
 import { FormBuilder } from "@angular/forms";
-
+import { ActivatedRoute } from "@angular/router";
+import { Video } from "../video";
 import { VideoService } from "../video.service";
-import { VideoModel } from "../video.model";
+
 
 @Component({
   selector: "app-edit",
@@ -18,7 +18,7 @@ export class EditComponent implements OnInit {
   });
 
   private videoId: string;
-  private video: VideoModel;
+  private video: Video;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,8 +36,8 @@ export class EditComponent implements OnInit {
 
   submit() {
     if(confirm('Are you sure?')) {
-      const update: Partial<VideoModel> = this.form.value;
-      const video: VideoModel = { ...this.video, ...update };
+      const update: Partial<Video> = this.form.value;
+      const video: Video = { ...this.video, ...update };
       this.videoService.updateVideo(video).subscribe();
     }
   }
