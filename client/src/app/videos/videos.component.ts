@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AppService } from '../app.service';
 import { Video } from '../video';
 
@@ -9,14 +10,12 @@ import { Video } from '../video';
 })
 export class VideosComponent implements OnInit {
 
-  videos: Video[] = [];
+  videos$: Observable<Video[]>;
 
   constructor(private appService: AppService) { }
 
   ngOnInit() {
-    this.appService.getVideos().subscribe(videos => {
-      this.videos = videos;
-    });
+    this.videos$ = this.appService.getVideos();
   }
 
 }

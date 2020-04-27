@@ -1,6 +1,6 @@
 <mat-grid-list growHeight="450px" cols="4">
 
-  <mat-grid-tile *ngFor="let video of videos">
+  <mat-grid-tile *ngFor="let video of videos$ | async">
 
     <a [routerLink]="['video', video.id]" class="card-wrapper">
       <mat-card class="card">
