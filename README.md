@@ -39,11 +39,11 @@
    - Forms (CRUD) \
      Goal: learn how to create, edit and delete the data using Angular forms
 
-### Want to learn more Angular? 
+## Want to learn more Angular? 
 🎙 [Angular Rocks Podcast](https://angularrocks.com)  
 🚀 [Angular Tips and Tricks Newsletter](https://kuncevic.dev/daily) 
 
-## Contributors
+### Contributors
 
 [@kuncevic](https://github.com/kuncevic)
 [@Tibing](https://github.com/Tibing)
