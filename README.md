@@ -40,7 +40,7 @@
      Goal: learn how to create, edit and delete the data using Angular forms
 
 ## Want to learn more Angular? 
-🎙 [Angular Rocks Podcast](https://angularrocks.com)  
+🎙 [Angular Rocks Podcast](https://angularrocks.com/subscribe)  
 🚀 [Angular Tips and Tricks Newsletter](https://kuncevic.dev/daily) 
 
 ### Contributors
