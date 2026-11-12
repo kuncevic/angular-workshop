@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { FormBuilder } from "@angular/forms";
+import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { UntypedFormBuilder } from "@angular/forms";
 import { ActivatedRoute } from "@angular/router";
 import { Video } from "../video";
 import { VideoService } from "../video.service";
@@ -8,7 +8,9 @@ import { VideoService } from "../video.service";
 @Component({
   selector: "app-edit",
   templateUrl: "./edit.component.html",
-  styleUrls: ["./edit.component.scss"]
+  styleUrls: ["./edit.component.scss"],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false
 })
 export class EditComponent implements OnInit {
   form = this.fb.group({
@@ -22,7 +24,7 @@ export class EditComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private videoService: VideoService
   ) {}
 
