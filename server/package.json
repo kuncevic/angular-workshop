@@ -4,12 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx json-server --watch db.json"
+    "start": "npx json-server db.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "json-server": "^0.15.1"
+    "json-server": "^1.0.0-beta.15"
   }
 }
