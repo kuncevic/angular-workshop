@@ -1,0 +1,9 @@
+allowBuilds:
+  "@parcel/watcher": true
+  esbuild: true
+  lmdb: true
+  msgpackr-extract: true
+peerDependencyRules:
+  allowedVersions:
+    "@emnapi/core": "*"
+    "@emnapi/runtime": "*"
