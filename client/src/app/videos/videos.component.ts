@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppService } from '../app.service';
 import { Video } from '../video';
@@ -6,7 +6,9 @@ import { Video } from '../video';
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.scss']
+  styleUrls: ['./videos.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Eager,
+  standalone: false
 })
 export class VideosComponent implements OnInit {
 

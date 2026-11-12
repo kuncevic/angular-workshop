@@ -1,19 +1,19 @@
-<mat-grid-list growHeight="450px" cols="4">
+<mat-grid-list rowHeight="450px" cols="4">
 
-  <mat-grid-tile *ngFor="let video of videos$ | async">
-
-    <a [routerLink]="['video', video.id]" class="card-wrapper">
-      <mat-card class="card">
-        <img mat-card-image src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="video preview">
-        <mat-card-header>
-          <img mat-card-avatar src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="video preview">
-          <mat-card-title>{{video?.title}}</mat-card-title>
-          <mat-card-subtitle>Likes: {{video?.likes}}</mat-card-subtitle>
-          <mat-card-subtitle>Dislikes: {{video?.dislikes}}</mat-card-subtitle>
-        </mat-card-header>
-      </mat-card>
-    </a>
-
-  </mat-grid-tile>
+  @for (video of videos$ | async; track video) {
+    <mat-grid-tile>
+      <a [routerLink]="['video', video.id]" class="card-wrapper">
+        <mat-card class="card">
+          <img mat-card-image src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="video preview">
+          <mat-card-header>
+            <img mat-card-avatar src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="video preview">
+            <mat-card-title>{{video?.title}}</mat-card-title>
+            <mat-card-subtitle>Likes: {{video?.likes}}</mat-card-subtitle>
+            <mat-card-subtitle>Dislikes: {{video?.dislikes}}</mat-card-subtitle>
+          </mat-card-header>
+        </mat-card>
+      </a>
+    </mat-grid-tile>
+  }
 
 </mat-grid-list>
