@@ -1,16 +1,20 @@
-<li *ngIf="videos">
-  <ul *ngFor="let video of videos">
-    <a [routerLink]="['video', video.id]">
-      <span class="example-card">
-          <span>{{video?.title}}</span>
-        <br>
-        <img [width]="200" [height]="100" src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="Video image">
-        <br>
-          <span>Likes: {{video?.likes}}</span>
-        <br>
-          <span>Dislikes: {{video?.dislikes}}</span>
-      </span>
-    </a>
-  </ul>
-</li>
+@if (videos) {
+  <li>
+    @for (video of videos; track video) {
+      <ul>
+        <a [routerLink]="['video', video.id]">
+          <span class="example-card">
+            <span>{{video?.title}}</span>
+            <br>
+              <img [width]="200" [height]="100" src="https://i.ytimg.com/vi/{{video?.id}}/hq720.jpg" alt="Video image">
+              <br>
+                <span>Likes: {{video?.likes}}</span>
+                <br>
+                  <span>Dislikes: {{video?.dislikes}}</span>
+                </span>
+              </a>
+            </ul>
+          }
+        </li>
+      }
 
